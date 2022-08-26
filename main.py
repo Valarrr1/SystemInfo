@@ -28,3 +28,5 @@ print(f"Number of pyhsical cores: {psutil.cpu_count(logical=False)}")
 print(f"Number of logical cores: {psutil.cpu_count(logical=True)}")
 
 print(f"Current CPU utilization: {psutil.cpu_percent(interval=1)}")
+
+print(f"Total RAM installed : {round(psutil.virtual_memory().total/1000000000, 2)} GB")
