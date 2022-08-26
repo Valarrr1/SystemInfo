@@ -1,4 +1,4 @@
-
+import psutil
 import platform # importing class
 
 #computer network name
@@ -24,4 +24,7 @@ print(f"OS release: {platform.release()}")
 
 print(f"OS version : {platform.version()}")
 
+print(f"Number of pyhsical cores: {psutil.cpu_count(logical=False)}")
+print(f"Number of logical cores: {psutil.cpu_count(logical=True)}")
 
+print(f"Current CPU utilization: {psutil.cpu_percent(interval=1)}")
